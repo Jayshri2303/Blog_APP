@@ -1,12 +1,20 @@
 package com.shri.blog_app_apis.payloads;
 
 import jakarta.persistence.Column;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
+
 
 public class UserDTO {
+	
 	private int id;
+	@NotNull
 	private String name;
+	@Email
 	private String email;
+	@NotNull
 	private String password;
+	@NotNull
 	private String about;
 	public int getId() {
 		return id;
